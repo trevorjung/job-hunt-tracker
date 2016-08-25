@@ -1,0 +1,17 @@
+{
+  "name": "job-hunt-tracker",
+  "homepage": "https://github.com/trevorjung/job-hunt-tracker",
+  "authors": [
+    "Trevor Jung <trevorrjung@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
