@@ -1,7 +1,7 @@
 class Api::V1::ContactsController < ApplicationController
   
   def index
-    @contacts = Contact.where(user_id: current_user.id)
+    @contacts = Contact.all
     render json: @contacts
   end
 
