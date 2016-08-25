@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  company: MyString
+  email: MyString
+  LinkedIn_invite_sent_date: 2016-08-23
+  LinkedIn_connection: false
+  email_sent_date: 2016-08-23
+  meeting: false
+  meeting_date: 2016-08-23
+  interview: false
+  interview_date: 2016-08-23
+  notes: MyText
+  next_step: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  company: MyString
+  email: MyString
+  LinkedIn_invite_sent_date: 2016-08-23
+  LinkedIn_connection: false
+  email_sent_date: 2016-08-23
+  meeting: false
+  meeting_date: 2016-08-23
+  interview: false
+  interview_date: 2016-08-23
+  notes: MyText
+  next_step: MyText
