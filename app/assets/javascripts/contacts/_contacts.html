@@ -4,11 +4,13 @@
 <table>
   <thead>
     <tr>
-      <th ng-repeat="key in keys">{{key}}</th>
+      <th ng-repeat="header in columnHeaders">{{header}}</th>
     </tr>
   </thead>
+  <tbody>
+    <tr ng-repeat="contact in contacts">
+      <td ng-repeat="key in keys">{{contact[key]}}</td>
+    </tr>
+  </tbody>
 </table>
-  <div ng-repeat="contact in contacts">
-  {{contact.first_name}}
-  </div>
 </div>

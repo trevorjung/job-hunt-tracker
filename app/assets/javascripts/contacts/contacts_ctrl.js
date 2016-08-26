@@ -7,9 +7,14 @@
 
     $scope.index = function() {
       $scope.contacts = contacts.contacts
-      $scope.keys = Object.keys(contacts.contacts[0])
-      for (var i=0; i< $scope.keys.length; i++) {
-        $scope.keys[i] = $scope.keys[i].replace(/_/g, " ");
+      $scope.keys = Object.keys(contacts.contacts[0]).filter(function(key) {
+        return ["id", "updated_at", "created_at", "user_id", "active"].indexOf(key) == -1
+      })
+      $scope.columnHeaders = [];
+      for (var i=0; i < $scope.keys.length; i++) {
+        $scope.columnHeaders[i] = $scope.keys[i].replace(/_/g, " ").replace(/(^|\s)[a-z]/g,function(f) {
+          return f.toUpperCase();
+        });
       }
     }
 
