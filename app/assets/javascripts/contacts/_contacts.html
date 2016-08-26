@@ -1,5 +1,14 @@
-<div ng-init="init()">
+<div ng-init="index()">
 {{1+2}}
 <br>
-{{contacts || "nothing"}}
+<table>
+  <thead>
+    <tr>
+      <th ng-repeat="key in keys">{{key}}</th>
+    </tr>
+  </thead>
+</table>
+  <div ng-repeat="contact in contacts">
+  {{contact.first_name}}
+  </div>
 </div>

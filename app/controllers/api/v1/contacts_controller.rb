@@ -1,7 +1,7 @@
 class Api::V1::ContactsController < ApplicationController
   
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.as_json.push(Contact.new.as_json)
     render json: @contacts
   end
 

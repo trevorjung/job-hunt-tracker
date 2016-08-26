@@ -8,13 +8,23 @@
     function($stateProvider, $urlRouterProvider) {
 
       $stateProvider
-      .state('home', {
+      .state('contacts', {
         url: '',
         templateUrl: 'contacts/_contacts.html',
         controller: 'contactsCtrl',
         resolve: {
-          postPromise: ['contacts', function(contacts){
+          contactsPromise: ['contacts', function(contacts){
             return contacts.all();
+          }]
+        }
+      })
+      .state('contact', {
+        url: '/contacts/{id}',
+        templateUrl: 'contacts/_contact.html',
+        controller: 'contactsCtrl',
+        resolve: {
+          contactPromise: ['$stateParams', 'contacts', function($stateParams, contacts){
+            return contacts.find($stateParams.id);
           }]
         }
       });
