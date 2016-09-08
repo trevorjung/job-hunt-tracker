@@ -1,0 +1,16 @@
+<div ng-init="index()">
+{{1+2}}
+<br>
+<table>
+  <thead>
+    <tr>
+      <th ng-repeat="header in columnHeaders">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="contact in contacts">
+      <td ng-repeat="key in keys">{{contact[key]}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
